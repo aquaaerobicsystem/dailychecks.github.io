@@ -1,6 +1,6 @@
 <html>
 <body>
-   <h2>Log file creation for daily checks</p>
+   <h2>Log file creation for daily checks</h2>h2>
    <input type="checkbox" id="step1" name="step1" value="step 1:">
   <label for="step1">5:00am - Check SQL Jobs for Aqua18, Aqua26, Aqua55, Aqua57</label><br>
    <input type="checkbox" id="step2" name="step2" value="step 2:">
@@ -12,19 +12,10 @@
   <input type="submit" value="Submit">
    <br/>
    <button onclick = "downloadFile()"> save File </button>
-<script src="https://requirejs.org/docs/release/2.1.5/comments/require.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script> 
-<script type="text/javascript">
-  require.config({
-    paths: {
-        "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min"
-    },
-    waitSeconds: 40
-  });
-</script>
  <script type="text/javascript">
       const downloadFile = () => {
           const link = document.createElement("a");
