@@ -32,6 +32,8 @@
 var fs = require('fs');
 const path = require('path');
 
+
+         
 fs.appendFile(path.resolve('log.txt'), 'new data', function (err) {
   if (err) {
     console.error(err);
