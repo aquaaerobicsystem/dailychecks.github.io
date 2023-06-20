@@ -24,7 +24,7 @@
            const step3 = document.getElementById("step3").value + document.getElementById("step3").checked;
             const step4 = document.getElementById("step4").value + document.getElementById("step4").checked;
 
-jQuery.get('\\aqua55\APD\MorningScripts\morningchecks.txt', function(data) {
+jQuery.get('file:////aqua55/APD/MorningScripts/morningchecks.txt', function(data) {
          //alert(data.length);
           // initialize title and body variables
         if (data.length > 3){
@@ -37,7 +37,7 @@ const offsetMs = now.getTimezoneOffset() * 60 * 1000;
 const dateLocal = new Date(now.getTime() - offsetMs);
 const str = dateLocal.toISOString().slice(0, 19).replace(/-/g, "").replace("T", "").replace(":", "").replace(":", "").slice(0, -2);
 
-         link.download = "\\aqua55\APD\MorningScripts\morningchecks.txt";
+         link.download = "file:////aqua55/APD/MorningScripts/morningchecks.txt";
       
          link.click();
          URL.revokeObjectURL(link.href);
