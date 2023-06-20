@@ -24,11 +24,7 @@
            const step3 = document.getElementById("step3").value + document.getElementById("step3").checked;
             const step4 = document.getElementById("step4").value + document.getElementById("step4").checked;
 
-jQuery.get('file://aqua55/apd/MorningScripts/morningchecks.txt', function(data) {
-         //alert(data.length);
-          // initialize title and body variables
-        if (data.length > 3){
-        var notifs = data;
+
            const content = new Date().toLocaleString() + ": " + step1 + "," + step2 + "," + step3 + "," + step4;
          const file = new Blob([notifs + '\n' + content], { type: 'text/plain' });
          link.href = URL.createObjectURL(file);
@@ -40,13 +36,7 @@ const str = dateLocal.toISOString().slice(0, 19).replace(/-/g, "").replace("T", 
          link.download = "file://aqua55/apd/MorningScripts/morningchecks.txt";
       
          link.click();
-         URL.revokeObjectURL(link.href);
-}
-});
-
-         
-         
-         
+         URL.revokeObjectURL(link.href);     
       };
    </script>
 </body>
