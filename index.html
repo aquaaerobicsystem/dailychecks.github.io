@@ -32,7 +32,7 @@
          const content = new Date().toLocaleString() + ": " + step1 + "," + step2 + "," + step3 + "," + step4;
          const file = new Blob([content], { type: 'text/plain' });
          link.href = URL.createObjectURL(file);
-         link.download = "sample.txt";
+         link.download = "morningchecks.txt";
       
          link.click();
          URL.revokeObjectURL(link.href);
