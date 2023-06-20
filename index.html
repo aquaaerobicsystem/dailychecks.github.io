@@ -32,7 +32,12 @@
          const content = new Date().toLocaleString() + ": " + step1 + "," + step2 + "," + step3 + "," + step4;
          const file = new Blob([content], { type: 'text/plain' });
          link.href = URL.createObjectURL(file);
-         link.download = "morningchecks.txt";
+         const now = new Date();
+const offsetMs = now.getTimezoneOffset() * 60 * 1000;
+const dateLocal = new Date(now.getTime() - offsetMs);
+const str = dateLocal.toISOString().slice(0, 19).replace(/-/g, "").replace("T", "").replace(":", "").replace(":", "").slice(0, -2);
+
+         link.download = "morningchecks" + str + ".txt";
       
          link.click();
          URL.revokeObjectURL(link.href);
