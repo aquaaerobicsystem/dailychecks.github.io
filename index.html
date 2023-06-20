@@ -20,19 +20,9 @@
            const step3 = document.getElementById("step3").value + document.getElementById("step3").checked;
             const step4 = document.getElementById("step4").value + document.getElementById("step4").checked;
          const content = new Date().toLocaleString() + ": " + step1 + "," + step2 + "," + step3 + "," + step4;
-       var fs = require('fs');
-      fs.appendFile(path.resolve('dailylog.txt'), content, function (err) {
-           if (err) {
-     console.log(err);
-  } else {
-     console.log('Updated!');
-  }
- });
-
+    
 var fs = require('fs');
 const path = require('path');
-
-
          
 fs.appendFile(path.resolve('log.txt'), 'new data', function (err) {
   if (err) {
