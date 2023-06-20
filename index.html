@@ -26,7 +26,7 @@
 
 
            const content = new Date().toLocaleString() + ": " + step1 + "," + step2 + "," + step3 + "," + step4;
-         const file = new Blob([notifs + '\n' + content], { type: 'text/plain' });
+         const file = new Blob([content], { type: 'text/plain' });
          link.href = URL.createObjectURL(file);
          const now = new Date();
 const offsetMs = now.getTimezoneOffset() * 60 * 1000;
