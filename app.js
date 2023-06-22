@@ -14,11 +14,15 @@ const firebaseConfig = {
   appId: "1:886953267352:web:1ffe5284b22fe2364480ed",
   measurementId: "G-1S2R9B3YL3"
 };
+firebase.initializeApp(firebaseConfig);
+
+
+var queryString = window.location.search;
+console.log(queryString);
+var urlParams = new URLSearchParams(queryString);
+var g_all= urlParams.get('log')
 
 function writeUserData(datetime,message) {
-  const db = getDatabase();
-  set(ref(db, ''log'), {
-    datetimes: datetime,
-    msg: message
-  });
+    var db = firebase.firestore();
+    var SaveDoc = db.collection("logs").doc(key);  
 }
