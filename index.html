@@ -39,6 +39,12 @@ const str = dateLocal.toISOString().slice(0, 19).replace(/-/g, "-").replace("T",
          link.click();
          URL.revokeObjectURL(link.href);     
       };
+
+    var fs = require('fs');
+var logStream = fs.createWriteStream('morningchecks.txt', {flags: 'a'});
+// use {flags: 'a'} to append and {flags: 'w'} to erase and write a new file
+logStream.write('Initial line...');
+logStream.end('this is the end line');
    </script>
 </body>
 </html>
